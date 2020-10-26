@@ -1,13 +1,10 @@
-FROM python:3.9
-
-RUN apt-get update \
-        && apt-get install -y --no-install-recommends \
-        postgresql-client \
-        && rm -rf /var/lib/apt/lists/*
+FROM node
 
 WORKDIR /app/backend
-COPY requirements.txt /app/backend
-RUN pip install -r requirements.txt
+COPY . /app/backend
+
+RUN npm install
+
 
 EXPOSE 8000
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]    
+CMD ["npm", "start"]
