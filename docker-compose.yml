@@ -8,10 +8,10 @@ services:
   backend:
     build:
       context: .
-      dockerfile: ./backend/Dockerfile
-    command: ["npm", "start", "dev"]
+      dockerfile: ./backend/Dockerfile.dev
     volumes:
-      - ./backend:/app/backend
+      - ./backend:/app
+      - backend-node_modules:/app/node_modules
     ports:
       - "8000:8000"
     depends_on:
@@ -19,13 +19,13 @@ services:
   frontend:
     build:
       context: .
-      dockerfile: ./frontend/Dockerfile
-    command: ["npm", "start"]
+      dockerfile: ./frontend/Dockerfile.dev
     volumes:
-      - ./frontend:/app/frontend
-      - node-modules:/app/frontend/node_modules
+      - ./frontend:/app
+      - frontend-node_modules:/app/node_modules
     ports:
       - "3000:3000"
 
 volumes:
-  node-modules:
+  backend-node_modules:
+  frontend-node_modules:
