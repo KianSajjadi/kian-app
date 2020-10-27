@@ -11,7 +11,7 @@
     },
     "scripts": {
         "start": "node server.js",
-        "dev": "tsc --watch --onSuccess && nodemon ./src/server.js"
+        "dev": "nodemon -e ts --exec ”tsc -p ./tsconfig.json && node ./src/server.js"
     },
     "devDependencies": {
         "typescript": "^4.0.3"
