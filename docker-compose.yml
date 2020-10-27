@@ -3,6 +3,12 @@ version: '3'
 services:
   db:
     image: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: db
+      POSTGRES_USER: user
+    volumes:
+      - ./db:/app
     ports:
       - "5432:5432"
   backend:
