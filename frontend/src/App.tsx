@@ -1,17 +1,21 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
 
 
-class App() extends React.Component {
+class App extends React.Component {
   
-  return() => {
-    <div className = "App">
-    <header className = "App-header">
-      <p>cri</p>
-    </header>
-  </div>
-  };
+  render() {
+    return (
+      <div className = "App">
+        <header className = "App-header">
+          <p>cri</p>
+        </header>
+      </div>
+    )
+  }
+
 };
 
 
