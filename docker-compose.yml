@@ -22,6 +22,8 @@ services:
       - "8000:8000"
     depends_on:
       - db
+    environment:
+      TYPEORM_HOST: db
   frontend:
     build:
       context: .
