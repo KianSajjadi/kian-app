@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/test", (req, res) => {
-    res.send("zombo com");
+    res.send("sajjadi trajjadi");
 })
 
 export = router;
