@@ -6,6 +6,9 @@ export class User {
     @PrimaryGeneratedColumn()
     id: number;
 
+		@Column()
+		email: string;
+
     @Column()
     firstName: string;
 
@@ -14,5 +17,11 @@ export class User {
 
     @Column()
     isActive: boolean;
+
+		@Column()
+		salt: string;
+
+		@Column()
+		password: string;
 
 }

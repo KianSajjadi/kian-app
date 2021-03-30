@@ -6,8 +6,4 @@ router.get("/", (req, res) => {
     res.send("Chungus Bungus Index Pagus")
 });
 
-router.get("/test", (req, res) => {
-    res.send("sajjadi trajjadi");
-})
-
 export = router;

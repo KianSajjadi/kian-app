@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
+import Routes from "./Routes";
 
 
 class App extends React.Component {
@@ -25,6 +26,7 @@ class App extends React.Component {
         <header className = "App-header">
         <p className="App-intro">{this.state["apiResponse"]}</p>
         </header>
+				<Routes />
       </div>
     )
   }
